@@ -1,7 +1,12 @@
 import React from 'react';
+import {useTranslation} from 'react-i18next';
 import {Link} from 'react-router-dom';
 
+import LanguageSwitcher from './languageswitcher';
+
 function Navbar(props) {
+  const {t} = useTranslation();
+
   // HTML Properties for each of the links in UI
   const navLinkProps = (path, animationDelay) => ({
     className: `fadeInUp ${window.location.pathname === path ? 'focused' : ''}`,
@@ -22,7 +27,7 @@ function Navbar(props) {
       >
         <img
           className="fadeInUp logo"
-          alt="India COVID-19 Tracker"
+          alt={t('India COVID-19 Tracker')}
           src="/icon.png"
           style={{
             animationDelay: '0.0s',
@@ -39,14 +44,16 @@ function Navbar(props) {
                 <span
                   {...navLinkProps(page.pageLink, page.animationDelayForNavbar)}
                 >
-                  {page.displayName}
+                  {t(page.displayName)}
                 </span>
               </Link>
             );
           })}
         </div>
 
-        <div className="navbar-right"></div>
+        <div className="navbar-right">
+          <LanguageSwitcher />
+        </div>
       </div>
     );
   } else {
