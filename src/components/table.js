@@ -104,10 +104,10 @@ function Table(props) {
 
   return (
     <>
-      <h5 className="affected-count fadeInUp" style={{animationDelay: '1s'}}>
+      <h5 className="affected-count fadeInUp" style={{animationDelay: '1.7s'}}>
         {count} {t('States/UTS Affected')}
       </h5>
-      <table className="table fadeInUp" style={{animationDelay: '1s'}}>
+      <table className="table fadeInUp" style={{animationDelay: '1.8s'}}>
         <thead>
           <tr>
             <th

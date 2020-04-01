@@ -135,12 +135,13 @@ function ChoroplethMap({
         );
     },
     [
-      mapData,
       mapMeta,
-      statistic.total,
-      statistic.maxConfirmed,
-      changeMap,
       setHoveredRegion,
+      mapData,
+      statistic.maxConfirmed,
+      statistic.total,
+      changeMap,
+      t,
     ]
   );
 
@@ -203,7 +204,7 @@ function ChoroplethMap({
       .call(legendLinear)
       .selectAll('text')
       .style('font-size', '10px');
-  }, [statistic.maxConfirmed]);
+  }, [statistic.maxConfirmed, t]);
 
   useEffect(() => {
     (async () => {
@@ -233,7 +234,7 @@ function ChoroplethMap({
   }, [mapMeta.mapType, svgRenderCount, selectedRegion]);
 
   return (
-    <div className="svg-parent">
+    <div className="svg-parent fadeInUp" style={{animationDelay: '2.5s'}}>
       <svg
         id="chart"
         width="480"

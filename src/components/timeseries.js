@@ -327,7 +327,7 @@ function TimeSeries(props) {
         <div className="svg-parent is-gray">
           <div className="stats is-gray">
             <h5>
-              {t('Deceased')} <br />
+              {t('Deaths')} <br />
               {datapoint['date']}
             </h5>
             <div className="stats-bottom">
@@ -423,7 +423,7 @@ function TimeSeries(props) {
         <div className="svg-parent is-gray">
           <div className="stats is-gray">
             <h5>
-              {t('Deceased')} <br />
+              {t('Deaths')} <br />
               {datapoint['date']}
             </h5>
             <div className="stats-bottom">

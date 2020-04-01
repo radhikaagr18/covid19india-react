@@ -56,8 +56,8 @@ function Home(props) {
   return (
     <div className="Home">
       <div className="home-left">
-        <div className="header fadeInUp" style={{animationDelay: '0.5s'}}>
-          <div className="header-mid">
+        <div className="header">
+          <div className="header-mid fadeInUp" style={{animationDelay: '1s'}}>
             <div className="titles">
               <h1>{t('India COVID-19 Tracker')}</h1>
               <h6>{t('A Crowdsourced Initiative')}</h6>
@@ -99,7 +99,7 @@ function Home(props) {
 
             <div
               className="timeseries-header fadeInUp"
-              style={{animationDelay: '1.5s'}}
+              style={{animationDelay: '2.3s'}}
             >
               <h1>{t('Spread Trends')}</h1>
               <div className="tabs">

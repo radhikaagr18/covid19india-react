@@ -15,14 +15,16 @@ import Links from './components/links';
 import Cluster from './components/cluster';
 import FAQ from './components/faq';
 import Banner from './components/banner';
-import {useTranslation} from 'react-i18next';
+import Popup from './components/popup';
 /* import PatientDB from './components/patientdb';*/
+
+import {useTranslation} from 'react-i18next';
 
 const history = require('history').createBrowserHistory;
 
 function App() {
   const {t} = useTranslation();
-  
+
   const pages = [
     {
       pageLink: '/',
@@ -49,9 +51,9 @@ function App() {
       animationDelayForNavbar: 0.5,
     },
     {
-      pageLink: '/faq',
+      pageLink: '/about',
       view: FAQ,
-      displayName: 'FAQ',
+      displayName: 'About',
       animationDelayForNavbar: 0.6,
     },
   ];
@@ -110,6 +112,8 @@ function App() {
           </a>
         </div>
       </footer>
+
+      <Popup />
     </div>
   );
 }

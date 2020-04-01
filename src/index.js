@@ -7,7 +7,7 @@ import i18n from './i18n';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Suspense fallback={'Loading...'}>
+  <Suspense fallback={''}>
     <I18nextProvider i18n={i18n}>
       <App />
     </I18nextProvider>
